@@ -1,0 +1,8 @@
+DataFolder=${PWD}
+NameScript="TiffSpatialMeanCorrection"
+NameScriptPy=$NameScript".py"
+cd ~/image_store/Scripts/PythonSrc/
+NoHupFile=$DataFolder"/"$NameScript".NoHup"
+rm -f $NoHupFile
+nohup python $NameScriptPy $DataFolder > $NoHupFile&
+##python -i $NameScriptPy $DataFolder 
